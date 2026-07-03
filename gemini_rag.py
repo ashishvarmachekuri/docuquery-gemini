@@ -26,7 +26,7 @@ class Config:
     """All settings in one place"""
     
     # Gemini settings
-    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
     GEMINI_MODEL = "gemini-2.5-flash"
     
     # Paths
